@@ -306,7 +306,7 @@
                     record = porcentaje;
 
                     sonidoRecord.currentTime = 0;
-                    sonidoRecord.play();
+                    sonidoRecord.play().catch(e => console.log("Audio bloqueado:", e));
 
                     resultado.textContent =
                         `🏆 NEW BEST SCORE • ${porcentaje.toFixed(1)}%`;
